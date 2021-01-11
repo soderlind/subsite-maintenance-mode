@@ -1,0 +1,17 @@
+{
+	"name": "soderlind/subsite-maintenance-mode",
+	"description": "Set subsite in mainenancemode",
+	"type": "wordpress-plugin",
+	"homepage": "https://github.com/soderlind/subsite-maintenance-mode",
+	"license": "GPL-2.0-or-later",
+	"require": {
+		"soderlind/class-wp-table-custom-column-toggle": "^1.0"
+	},
+	"extra": {
+		"installer-paths": {
+			"inc/{$name}/": [
+				"type:wordpress-dropin"
+			]
+		}
+	}
+}

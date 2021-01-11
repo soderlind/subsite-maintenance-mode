@@ -18,23 +18,29 @@
  * Text Domain: subsite-maintenance-mode
  * License:     GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * Network: true
  */
 
+namespace Soderlind\Plugin\Multisite;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	wp_die();
 }
 
-add_action( ‘init’, function () {
+require_once plugin_dir_path( __FILE__ ) . 'inc/class-wp-table-custom-column-toggle/class-wp-table-custom-column-toggle.php';
+require_once plugin_dir_path( __FILE__ ) . 'class-subsite-maintenance-mode.php';
 
-	$subsites_in_maintenance_mode = [
-		2,3,4,5
-	];
 
-	$blog_id = get_current_blog_id();
+$subsite_maintenance_sites = \WP_Table_Custom_Column_Toggle::create(
+	[
+		'column_id'       => 'subsite_maintenance',
+		'column_name'     => '<span class="dashicons dashicons-hammer"></span>',
+		'column_hooks'    => [
+			'header'  => 'wpmu_blogs_columns',
+			'content' => 'manage_sites_custom_column',
+		],
+		'use_siteoptions' => true,
+	]
+);
 
-	if ( is_admin() && isset( $subsites_in_maintenance_mode[ $blog_id ] ) && ! current_user_can( 'manage_network' ) && ! ( defined( 'DOING_AJAX' ) && DOING_AJAX ) ) {
-		wp_redirect( home_url() );
-		exit;
-	}
-} );
+$subsite_maintenance = \Subsite_Maintenance::create( $subsite_maintenance_sites );
