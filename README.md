@@ -1,4 +1,4 @@
-# Subsite Maintenance Mode
+# WordPress Subsite Maintenance Mode
 
 Prevent access to the dashboard(wp-admin) for selected subsites. Only super admin can access the dashboard.
 
