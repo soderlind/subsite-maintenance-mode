@@ -27,7 +27,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	wp_die();
 }
 
-require_once plugin_dir_path( __FILE__ ) . 'inc/class-wp-table-custom-column-toggle/class-wp-table-custom-column-toggle.php';
+require_once plugin_dir_path( __FILE__ ) . 'inc/class-wp-list-table-custom-column-toggle/class-wp-table-custom-column-toggle.php';
 require_once plugin_dir_path( __FILE__ ) . 'class-subsite-maintenance-mode.php';
 
 
@@ -36,7 +36,7 @@ $subsite_maintenance_sites = \WP_List_Table_Custom_Column_Toggle::create(
 		'column_id'       => 'subsite_maintenance',
 		'column_name'     => 'Maintenance mode',
 		'column_hooks'    => [
-			'header'  => 'wpmu_blogs_columns',
+			'header'  => 'manage_sites-network_columns',
 			'content' => 'manage_sites_custom_column',
 		],
 		'use_siteoptions' => true,
