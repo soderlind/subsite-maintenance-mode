@@ -31,10 +31,10 @@ require_once plugin_dir_path( __FILE__ ) . 'inc/class-wp-table-custom-column-tog
 require_once plugin_dir_path( __FILE__ ) . 'class-subsite-maintenance-mode.php';
 
 
-$subsite_maintenance_sites = \WP_Table_Custom_Column_Toggle::create(
+$subsite_maintenance_sites = \WP_List_Table_Custom_Column_Toggle::create(
 	[
 		'column_id'       => 'subsite_maintenance',
-		'column_name'     => '<span class="dashicons dashicons-hammer"></span>',
+		'column_name'     => 'Maintenance mode',
 		'column_hooks'    => [
 			'header'  => 'wpmu_blogs_columns',
 			'content' => 'manage_sites_custom_column',

@@ -8,20 +8,25 @@ class Subsite_Maintenance {
 
 	private $table;
 
-	private function __construct( \WP_Table_Custom_Column_Toggle $table ) {
+	/**
+	 * Constructor.
+	 *
+	 * @param \WP_List_Table_Custom_Column_Toggle $table
+	 */
+	private function __construct( \WP_List_Table_Custom_Column_Toggle $table ) {
 		$this->table = $table;
 		$this->init();
 	}
 
 	/**
-	 * static factory
+	 * Static factory.
 	 *
 	 * @link https://carlalexander.ca/static-factory-method-pattern-wordpress/
 	 *
-	 * @param object $table
+	 * @param \WP_List_Table_Custom_Column_Toggle $table
 	 * @return \Index_Me_Rest
 	 */
-	public static function create( \WP_Table_Custom_Column_Toggle $table ) {
+	public static function create( \WP_List_Table_Custom_Column_Toggle $table ) {
 		return new self( $table );
 	}
 

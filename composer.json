@@ -5,7 +5,7 @@
 	"homepage": "https://github.com/soderlind/subsite-maintenance-mode",
 	"license": "GPL-2.0-or-later",
 	"require": {
-		"soderlind/class-wp-table-custom-column-toggle": "^1.0"
+		"soderlind/class-wp-table-custom-column-toggle": "2.0.0"
 	},
 	"extra": {
 		"installer-paths": {

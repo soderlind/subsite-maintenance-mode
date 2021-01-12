@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d9a068a652d7fd2955b8f20bb9718d29",
+    "content-hash": "dc7877aa0e4856676781046274020718",
     "packages": [
         {
             "name": "composer/installers",
@@ -149,16 +149,16 @@
         },
         {
             "name": "soderlind/class-wp-table-custom-column-toggle",
-            "version": "1.0.6",
+            "version": "2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/soderlind/class-wp-table-custom-column-toggle.git",
-                "reference": "53bc98f2c11a07a951f5d197730964bf07f13b27"
+                "reference": "853be8d3a4b7eec299d81dedc3a8330c68c31bac"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/soderlind/class-wp-table-custom-column-toggle/zipball/53bc98f2c11a07a951f5d197730964bf07f13b27",
-                "reference": "53bc98f2c11a07a951f5d197730964bf07f13b27",
+                "url": "https://api.github.com/repos/soderlind/class-wp-table-custom-column-toggle/zipball/853be8d3a4b7eec299d81dedc3a8330c68c31bac",
+                "reference": "853be8d3a4b7eec299d81dedc3a8330c68c31bac",
                 "shasum": ""
             },
             "require": {
@@ -192,9 +192,9 @@
             ],
             "support": {
                 "issues": "https://github.com/soderlind/class-wp-table-custom-column-toggle/issues",
-                "source": "https://github.com/soderlind/class-wp-table-custom-column-toggle/tree/1.0.6"
+                "source": "https://github.com/soderlind/class-wp-table-custom-column-toggle/tree/2.0.0"
             },
-            "time": "2021-01-11T16:30:16+00:00"
+            "time": "2021-01-12T00:11:46+00:00"
         }
     ],
     "packages-dev": [],
