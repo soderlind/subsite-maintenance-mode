@@ -137,16 +137,6 @@ class WP_List_Table_Custom_Column_Toggle {
 				'ajaxurl'   => $ajaxurl,
 			]
 		);
-		$column_id = $this->properties->column_id;
-		$style     = <<< EOS
-		.column-$column_id {
-			width: 5%;
-		}
-		td.column-$column_id {
-			text-align: center;
-		}
-EOS;
-		wp_add_inline_style( 'custom-column-toggle', $style );
 	}
 
 	/**

@@ -34,7 +34,7 @@ require_once plugin_dir_path( __FILE__ ) . 'class-subsite-maintenance-mode.php';
 $subsite_maintenance_sites = \WP_List_Table_Custom_Column_Toggle::create(
 	[
 		'column_id'       => 'subsite_maintenance',
-		'column_name'     => 'Maintenance mode',
+		'column_name'     => 'Maintenance<br/>mode',
 		'column_hooks'    => [
 			'header'  => 'manage_sites-network_columns',
 			'content' => 'manage_sites_custom_column',
