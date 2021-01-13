@@ -6,6 +6,8 @@ Prevent access to the dashboard(wp-admin) for selected subsites. Only super admi
 
 In `Network Admin->Sites`, toggle the subsite you want to put in maintenance mode.
 
+Chechboxes are added to `Network Admin->Sites` using the [WP_List_Table_Custom_Toggle_Column](https://github.com/soderlind/class-wp-list-table-custom-column-toggle) class.
+
 ## Copyright and License
 
 Subsite Maintenance Mode is copyright 2021 Per Soderlind
